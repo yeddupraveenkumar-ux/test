@@ -1,0 +1,649 @@
+/* Global Styles */
+:root {
+    --primary-color: #013460;
+    --secondary-color: #ffc516;
+    --text-color: #333;
+    --light-color: #f4f4f4;
+    --white: #fff;
+    --dark: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    height: 50px;
+}
+
+.nav-links a.active { 
+    font-weight: bold;
+    height: 70px;
+    color: var(--secondary-color);
+
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+/* Main Content Styles */
+main {
+    padding: 80px 0px 20px 0px;
+}
+
+.page-title {
+    
+    text-align: left;
+    color: var(--primary-color);
+     max-width: 1280px;
+    margin: 20px 0px 20px 0;
+    background-color: #013460;
+    height: 350px;
+    width: 600px;
+}
+
+/* Home Page Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+}
+
+.hero-text {
+    flex: 0 0 55%;
+}
+
+.hero-image {
+    height: 633px;
+    width: 620px;
+    flex: 0 0 35%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.hero h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.image-frame {
+    border: 5px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.image-frame:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Works Page Styles */
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-info {
+    flex: 0 0 50%;
+}
+
+.project-image {
+    flex: 0 0 45%;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.03);
+}
+
+.project h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.project p {
+    margin-bottom: 20px;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-info, .contact-form {
+    flex: 0 0 48%;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item a:hover {
+    color: var(--secondary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer Styles */
+footer {
+    background-color:#e5e4e4;
+    color:  var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero, .project, .contact-container {
+        flex-direction: column;
+    }
+    
+    .hero-text, .hero-image, 
+    .project-info, .project-image,
+    .contact-info, .contact-form {
+        flex: 0 0 100%;
+    }
+    
+    .project:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Work page css*/
+
+.work_page{display: flex;
+            width:100%;
+            height:auto;
+        }
+
+.work_buttons{
+    height: auto;
+    width: 20%;
+    background-color:var(--primary-color);
+    text-align: right;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.vertical-menu {
+  width: 240px; /* Set a width if you like */
+}
+
+.vertical-menu a {
+  background-color: var(--primary-color); /* Grey background color */
+  color: wheat; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ffc516; /* Dark grey background on mouse-over */
+  color: black;
+}
+
+.vertical-menu a.active {
+  background-color: #ffc516; /* Add a green color to the "active/current" link */
+  color: black;
+}
+
+.work_projects{
+    height:auto;
+    width: 80%;
+    background-color: #e5e4e4;
+    margin-left: 20px;
+}
+
+
+/* Gallery slider*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+// /!\ IMPORTANT: this variable precises the number of slides contained in the slider.
+// if you add/remove images, make sure that this variable is up to date so the buttons,
+// the disposition of elements and the animations work correctly.
+$nb-slides: 5;
+
+// THE BASICS
+html, body {
+  color: white;
+  background-color: rgb(30, 30, 35);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-shadow: 5px 5px rgba($color: black, $alpha: .5);
+  }
+
+  h2 {
+    margin: 0;
+    opacity: .4;
+  }
+}
+
+.line {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  @extend .flex;
+  align-items: center; // horizontal
+  justify-content: center; // vertical
+}
+
+
+.carousel-wrapper {
+  @extend .flex;
+  position: relative;
+  max-width: 600px;
+  margin: 50px;
+
+  input {
+    display: none;
+  }
+}
+
+
+// CAROUSEL / SLIDER
+.carousel {
+  @extend .line;
+  overflow: hidden;
+  border-radius: 15px;
+
+  ul {
+    @extend .center;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100% * $nb-slides;
+
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  li {
+    @extend .line;
+
+    img {
+      @extend .line;
+      border-radius: 15px;
+    }
+  }
+}
+
+
+// NAVIGATION DOTS
+.nav-dot {
+  $dot-size: 15px;
+  position: absolute;
+  cursor: pointer;
+
+  margin-left: -$dot-size / 2;
+  bottom: -$dot-size * 1.5;
+  width: $dot-size;
+  height: $dot-size;
+
+  opacity: .5;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+
+  &:hover {
+    opacity: .8;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+// goes from 1 to 5.
+@for $n from 1 through $nb-slides {
+  // arranges the navigation dots horizontally
+  .nav-dot[for=slide#{$n}] {
+    left: 50% + ((($n - 1) - (($nb-slides - 1)/ 2)) * 5%);
+  }
+
+  #slide#{$n}:checked {
+    // moves the carousel to the right slide
+    & ~ .carousel ul { left: -100% * ($n - 1) }
+
+    // highlights the selected navigation dot
+    & ~ .nav-dot[for=slide#{$n}] {
+      opacity: 1;
+    }
+  }
+}
+
+
+// ARROWS
+%arrow {
+  $arrow-size: 50px;
+  display: none;  // hidden by default
+  position: absolute;
+
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 0 0 7.5px rgba($color: black, $alpha: .7);
+
+  top: 50%;
+  z-index: 1;
+  opacity: .7;
+  margin-top: -$arrow-size / 2;
+  height: $arrow-size;
+  font-size: $arrow-size;
+  transition: .2s;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.left-arrow {
+  @extend %arrow;
+  left: 15px;
+}
+
+.right-arrow {
+  @extend %arrow;
+  right: 15px;
+}
+
+@function custom-modulo($n) {
+  // this function returns '$n % $nb-slides', except that if the result is 0,
+  // '$nb-slides' is returned.
+  // for exemple, for $nb-slides = 4, possible values are {1, 2, 3, 4}
+  // (and not {0, 1, 2, 3}).
+  @return 1 + ($nb-slides + (($n - 1) % $nb-slides)) % $nb-slides;
+}
+
+@for $n from 1 through $nb-slides {
+  // when the nth slide is selected,
+  // displays the left-arrow that goes to the (n-1)th slide
+  // and the right arrow that goes to the (n+1)th slide.
+  // don't worry, it loops thanks to the 'custom-modulo' function !
+
+  #slide#{$n}:checked {
+    & ~ .left-arrow[for=slide#{custom-modulo($n - 1)}],
+    & ~ .right-arrow[for=slide#{custom-modulo($n + 1)}] {
+      display: block;
+    }
+  }
+}
+
+
+
+.signature {
+  margin-top: 100px;
+  bottom: 0;
+  font-family: "Quicksand";
+  color: rgba(150, 150, 170);
+  text-shadow: 0 2.5px rgba(0, 0, 0, 0.25);
+
+  .name {
+    color: white;
+  }
+
+  .dot {
+    margin: 0 5px;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
